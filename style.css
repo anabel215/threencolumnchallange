@@ -1,0 +1,101 @@
+:root{
+  --fontlexend:'Lexend Deca', sans-serif;
+  --fontbig:'Big Shoulders Display', cursive;
+    /*primary*/
+  --Brightorange: hsl(31, 77%, 52%);
+  --Darkcyan: hsl(184, 100%, 22%);
+  --Verydarkcyan: hsl(179, 100%, 13%);
+  /*neutral*/
+  --Transparentwhite/*paragraphs*/: hsla(0, 0%, 100%, 0.75);
+  --Verylightgray/*background, headings, buttons*/: hsl(0, 0%, 95%);
+
+}
+
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+}
+.container{
+  padding: 40px 30px;
+}
+.box{
+  padding: 2em;
+}
+.box__1{
+  background-color:var(--Brightorange);
+  border-radius: .5em .5em 0 0 ;
+}
+.box__1 .btn{
+  color: var(--Brightorange);
+}
+.box__2{
+  background-color: var(--Darkcyan);
+}
+.box__2 .btn{
+  color: var(--Darkcyan);
+}
+
+.box__3{
+  background-color: var(--Verydarkcyan);
+  border-radius: 0 0 .5em .5em;
+}
+.box__3 .btn{
+  color: var(--Verydarkcyan);
+}
+.subtitle{
+  font-family: var(--fontbig);
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--Verylightgray);
+}
+.paragraph{
+  font-family: var(--fontlexend);
+  font-weight: 400;
+  color: var(--Transparentwhite);
+  font-size: 15px;
+  text-align: start;
+  padding-bottom: 1em;
+}
+.btn{
+  font-family: var(--fontlexend);
+  background-color: var(--Verylightgray);
+  border: 2px solid var(--Verylightgray);
+  border-radius: 2em;
+  padding: .4em .6em;
+  cursor:pointer;
+  transition: all 0.4s ease-in-out;
+  font-size: 14px;
+}
+.btn:hover{
+  background-color: transparent;
+  color: var(--Verylightgray);
+}
+
+
+/*****footer*****/
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+/****MediaQuerys****/
+@media(min-width:992px) {
+    .container{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      max-width: 900px;
+      margin: auto;
+    }
+    .box__1{
+      border-radius: 1em 0 0 1em;
+    }
+    .box__3{
+      border-radius: 0 1em 1em 0;
+    }
+    .paragraph{
+      padding: 0;
+    }
+    
+}
